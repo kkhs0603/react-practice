@@ -11,6 +11,7 @@ function App() {
       <button onClick={() => setCount(count + 1)}>
         Click me
       </button>
+      
       <input onChange={(e) => setText(e.target.value)}></input>
     </div>
   );
