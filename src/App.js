@@ -1,11 +1,15 @@
 import React, { useState }  from 'react';
+import { setText } from './actions/index'
 import './App.css';
 
-function App() {
+function App(props) {
   const [count, setCount] = useState(0)
   const [text, setText] = useState('')
   console.log(count)
   console.log(text)
+  const store = props.store;
+  console.log(store.dispach)
+  
   return (
     <div className="App">
       <button onClick={() => setCount(count + 1)}>

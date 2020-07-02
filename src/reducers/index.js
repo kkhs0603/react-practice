@@ -1,11 +1,11 @@
-//import { ADD_WORDS, CREATE_IDEA ,INPUT_WORD} from '../Actions'
+import { SET_TEXT } from '../actions'
 const initialState = {
   inputValue: "",
 };
 const reducer = (state = initialState, action) => {
   switch(action.type) {
-    case '':
-      return []
+    case SET_TEXT:
+      return action.state
     default:
       return state
   }
