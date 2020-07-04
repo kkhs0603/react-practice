@@ -9,7 +9,7 @@ function App(props) {
   console.log(text)
   const store = props.store;
   console.log(store.dispach)
-  
+  //reduxの本を読み終えたらコーディング
   return (
     <div className="App">
       <button onClick={() => setCount(count + 1)}>
