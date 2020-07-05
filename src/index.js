@@ -2,14 +2,14 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
-import rootReducer from './reducers'
+import {counterReducer} from './reducers/counterReducer'
 import App from './App'
 
-const store = createStore(rootReducer)
+const store = createStore(counterReducer)
 
 render(
   <Provider store={store}>
-    <App store={store}/>
+    <App/>
   </Provider>,
   document.getElementById('root')
 )
