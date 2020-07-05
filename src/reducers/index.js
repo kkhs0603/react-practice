@@ -1,14 +1,10 @@
-import { SET_TEXT } from '../actions'
-const initialState = {
-  inputValue: "",
-};
-const reducer = (state = initialState, action) => {
-  switch(action.type) {
-    case SET_TEXT:
-      return action.state
-    default:
-      return state
-  }
-}
+import { combineReducers } from 'redux'
 
-export default reducer
+import counterReducer from './counterReducer'
+import textReducer from './textReducer'
+
+export default combineReducers({
+  counterReducer,
+  textReducer
+})
+

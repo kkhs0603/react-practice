@@ -2,10 +2,11 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
-import {counterReducer} from './reducers/counterReducer'
+import  reducer  from './reducers/index'
 import App from './App'
 
-const store = createStore(counterReducer)
+const store = createStore(reducer)
+console.log(store.getState())
 
 render(
   <Provider store={store}>

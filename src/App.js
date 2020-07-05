@@ -1,5 +1,6 @@
 import React, { useState }  from 'react';
 import { increment, decrement } from './actions/conterAction'
+import { setText } from './actions/index'
 import { connect } from 'react-redux';
 import './App.css';
 
@@ -29,14 +30,16 @@ function App(props) {
 }
 
 const mapStateToProps = (state) => {
+  console.log(state)
   return {
-    count: state
+    count: state.counterReducer
   }
 }
 const mapDispatchtoProps = (dispach) => {
   return {
     increment: () => dispach(increment()),
-    decrement: () => dispach(decrement())
+    decrement: () => dispach(decrement()),
+    setText: () => dispach(setText())
   }
 }
 export default connect(mapStateToProps,mapDispatchtoProps)(App);
