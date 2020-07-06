@@ -5,12 +5,7 @@ import { connect } from 'react-redux';
 import './App.css';
 
 function App(props) {
-  const [count, setCount] = useState(0)
   const [text, setText] = useState('')
-  //console.log(count)
-  //console.log(text)
-  //const store = props.store;
-  //console.log(store.dispach)
   //reduxの本を読み終えたらコーディング
   return (
     <div className="App">
@@ -32,14 +27,15 @@ function App(props) {
 const mapStateToProps = (state) => {
   console.log(state)
   return {
-    count: state.counterReducer
+    count: state.counterReducer,
+    text: state.textReducer
   }
 }
 const mapDispatchtoProps = (dispach) => {
   return {
     increment: () => dispach(increment()),
     decrement: () => dispach(decrement()),
-    setText: () => dispach(setText())
+    setText: (text) => dispach(setText(text))
   }
 }
 export default connect(mapStateToProps,mapDispatchtoProps)(App);

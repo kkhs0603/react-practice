@@ -5,10 +5,13 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch(action.type) {
     case SET_TEXT:
-      return state
+      return {
+        inputValue: action.payload
+      }
     default:
       return state
   }
 }
 
 export default reducer
+//次はここに入力値を反映
