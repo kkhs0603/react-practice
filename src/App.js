@@ -3,10 +3,9 @@ import { increment, decrement } from './actions/conterAction'
 import { setText } from './actions/index'
 import { connect } from 'react-redux';
 import './App.css';
+import TestComponent from './components/testComponent';
 
 function App(props) {
-  const [text, setText] = useState('')
-  //reduxの本を読み終えたらコーディング
   return (
     <div className="App">
       Clicked: {props.count} times.<br></br>
@@ -18,8 +17,11 @@ function App(props) {
       </button>
       <br></br>
       <br></br>
-      Input text: {text}<br></br>
+      Input text: {props.text.inputValue}<br></br>
       <input onChange={(e) => props.setText(e.target.value)}></input>
+      <br></br>
+      <br></br>
+      <TestComponent/>
     </div>
   );
 }
