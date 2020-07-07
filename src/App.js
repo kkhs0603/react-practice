@@ -19,7 +19,7 @@ function App(props) {
       <br></br>
       <br></br>
       Input text: {text}<br></br>
-      <input onChange={(e) => setText(e.target.value)}></input>
+      <input onChange={(e) => props.setText(e.target.value)}></input>
     </div>
   );
 }

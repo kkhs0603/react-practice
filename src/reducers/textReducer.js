@@ -14,4 +14,3 @@ const reducer = (state = initialState, action) => {
 }
 
 export default reducer
-//次はここに入力値を反映
